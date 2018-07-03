@@ -33,4 +33,6 @@ public class Computer {
     public void setOutputDevice(IOutput outputDevice) {
         this.outputDevice = outputDevice;
     }
+
+
 }

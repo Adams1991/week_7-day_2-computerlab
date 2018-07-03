@@ -4,6 +4,8 @@ import device_management.Printer;
 import device_management.Speaker;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
+import sun.jvm.hotspot.oops.OopUtilities;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -58,4 +60,9 @@ public class ComputerTest {
         computer.setOutputDevice(printer);
         assertEquals("printing: dissertation", computer.outputData("dissertation"));
     }
+
+//    @Test
+//    public void hasInputDevice(){
+//        assertNotNull(computer.getInputDevice());
+//    }
 }
