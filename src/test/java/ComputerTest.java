@@ -96,4 +96,10 @@ public class ComputerTest {
         assertEquals("clicks", computer.getDataStream());
     }
 
+    @Test
+    public void canOutputDataStream(){
+        computer.inputData("clicks");
+        assertEquals("clicks is now on screen", computer.outputDataStream());
+    }
+
 }

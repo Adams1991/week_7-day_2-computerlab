@@ -60,4 +60,8 @@ public class Computer {
     public void setDataStream(String dataStream) {
         this.dataStream = dataStream;
     }
+
+    public String outputDataStream() {
+        return outputData(dataStream);
+    }
 }
