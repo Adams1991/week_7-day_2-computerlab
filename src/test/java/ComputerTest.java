@@ -66,4 +66,9 @@ public class ComputerTest {
     public void hasInputDevice(){
         assertNotNull(computer.getInputDevice());
     }
+
+    @Test
+    public void canInputData() {
+        assertEquals("sending: clicks", computer.inputData("clicks"));
+    }
 }
