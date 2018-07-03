@@ -71,4 +71,29 @@ public class ComputerTest {
     public void canInputData() {
         assertEquals("sending: clicks", computer.inputData("clicks"));
     }
+
+    @Test
+    public void canSetInputDevice(){
+        Mouse mouse = new Mouse("Epson", "Blue");
+        computer.setInputDevice(mouse);
+        assertEquals(mouse, computer.getInputDevice());
+    }
+
+    @Test
+    public void canGetDataStream(){
+        assertEquals(null, computer.getDataStream());
+    }
+
+    @Test
+    public void canSetDataStream(){
+        computer.setDataStream("clicks");
+        assertEquals("clicks", computer.getDataStream());
+    }
+
+    @Test
+    public void canSaveDataStream(){
+        computer.inputData("clicks");
+        assertEquals("clicks", computer.getDataStream());
+    }
+
 }

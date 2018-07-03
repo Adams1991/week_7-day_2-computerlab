@@ -6,7 +6,7 @@ import behaviours.IOutput;
 public class Computer {
     private int ram;
     private int hddSize;
-
+    private String dataStream;
     private IOutput outputDevice;
     private IInput inputDevice;
 
@@ -15,6 +15,8 @@ public class Computer {
         this.hddSize = hddSize;
         this.outputDevice = outputDevice;
         this.inputDevice = inputDevice;
+        this.dataStream = null;
+        
     }
 
     public int getRam() {
@@ -42,6 +44,7 @@ public class Computer {
     }
 
     public String inputData(String data) {
+        setDataStream(data);
         return this.inputDevice.sendData(data);
     }
 
@@ -50,4 +53,11 @@ public class Computer {
     }
 
 
+    public String getDataStream() {
+        return dataStream;
+    }
+
+    public void setDataStream(String dataStream) {
+        this.dataStream = dataStream;
+    }
 }
