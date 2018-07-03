@@ -4,7 +4,7 @@ import behaviours.IInput;
 
 import java.security.Key;
 
-public class Keyboard {
+public class Keyboard implements IInput{
     private String model;
     private String type;
     
@@ -12,9 +12,7 @@ public class Keyboard {
     public Keyboard(String model, String type){
         this.model = model;
         this.type = type;
-        
     }
-
 
     public String getModel() {
         return model;
@@ -22,6 +20,10 @@ public class Keyboard {
 
     public String getType() {
         return type;
+    }
+
+    public String sendData(String data){
+        return "sending: " + data;
     }
 
 }

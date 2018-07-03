@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class KeyboardTest {
 
@@ -24,4 +25,8 @@ public class KeyboardTest {
         assertEquals("Disco", keyboard.getType());
     }
 
+    @Test
+    public void canSendData(){
+        assertEquals("sending: keystrokes", keyboard.sendData("keystrokes"));
+    }
 }
